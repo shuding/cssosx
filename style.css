@@ -1,0 +1,323 @@
+*{
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	list-style: none;
+	cursor: default;
+}
+
+::selection{ background: transparent; }
+::-moz-selection{ background: transparent; }
+
+body{
+	overflow: hidden;
+}
+
+.body_bg{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	left: 0;
+	top: 0;
+	background: url(file:///Users/dsds/Pictures/Widscreen/opLaT.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 0;
+}
+
+.main_menubar{
+	position: absolute;
+	height: 24px;
+	width: 100%;
+}
+
+.main_menubar .menubar_layout{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+    background:-webkit-linear-gradient(top, rgba(255,255,255,0.74) 20%, rgba(255,255,255,0.5));
+    background:-moz-linear-gradient(top, rgba(255,255,255,0.74) 20%, rgba(255,255,255,0.5));
+    background:-ms-linear-gradient(top, rgba(255,255,255,0.74) 20%, rgba(255,255,255,0.5));
+    background:-o-linear-gradient(top, rgba(255,255,255,0.74) 20%, rgba(255,255,255,0.5));
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.main_menubar ul{
+	position: absolute;
+	z-index: 102;
+	list-style: none;
+	white-space: nowrap;
+	color: #333;
+	width: 100%;
+}
+
+.main_menubar .apple_logo{
+	font-size: 19px;
+	vertical-align: bottom;
+	margin-left: 10px;
+}
+
+.main_menubar ul li{
+	position: relative;
+	display: inline-block;
+	padding-left: 8px;
+	padding-right: 8px;
+	font-size: 15px;
+	font-family: 'Lucida Sans';
+	letter-spacing: -0.3px;
+	height: 24px;
+	vertical-align: top;
+}
+
+.main_menubar ul li p{
+	margin-top: 2px;
+}
+
+.main_menubar ul li:hover{
+    background:-webkit-linear-gradient(top, rgba(24,96,248,0.7) 20%, rgba(29,91,224,0.9));
+    background:-moz-linear-gradient(top, rgba(24,96,248,0.7) 20%, rgba(29,91,224,0.9));
+    background:-ms-linear-gradient(top, rgba(24,96,248,0.7) 20%, rgba(29,91,224,0.9));
+    background:-o-linear-gradient(top, rgba(24,96,248,0.7) 20%, rgba(29,91,224,0.9));
+	color: white;
+}
+
+.main_menubar ul li:hover > ul{
+	visibility: visible;
+}
+
+.main_menubar ul ul{
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 24px;
+	display: block;
+	width: inherit;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	background: rgba(255, 255, 255, 0.92);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.33);
+	border: 1px solid rgba(0, 0, 0, 0.55);
+}
+
+.main_menubar ul ul li{
+	display: block;
+	padding-left: 24px;
+	padding-right: 24px;
+	z-index: 101;
+	vertical-align: middle;
+	height: 19px;
+}
+
+.split_line{
+	height: 1px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 100%;
+	background: #ddd;
+}
+
+.main_menubar ul ul ul{
+	position: absolute;
+	left: 100%;
+	top: -4px;
+	padding-top: 3px;
+	margin-left: -1px;
+	border-top-right-radius: 5px;
+	z-index: 102;
+}
+
+.main_menubar ul ul li p{
+	display: inline-block;
+	margin-top: 0;
+}
+
+.main_menubar .right_arrow_space{
+	display: inline-block;
+	opacity: 0;
+	padding-left: 16px;
+}
+
+.main_menubar .right_arrow{
+	position: absolute;
+	display: inline-block;
+	top:0px;
+	right: 16px;
+}
+
+.main_menubar .left_check{
+	position: absolute;
+	left: 7px;
+}
+
+.main_menubar .menu_block{
+	width: 100%;
+	color: #AAA;
+	padding-right: 16px;
+}
+
+.main_menubar .menu_block p{
+	text-indent: 20px;
+}
+
+.main_menubar .menu_block > li{
+	color: #333;
+}
+
+.main_menubar .right_icon{
+	display: inline-block;
+	position: absolute;
+	right: 16px;
+}
+
+.main_menubar .right_icon li{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.main_menubar .right_icon .fa{
+	margin-top:4px;
+}
+
+.content{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.57);
+	-webkit-transition: left 0.3s ease-in-out;
+}
+
+.sidebar{
+	position: absolute;
+	z-index: -1;
+	background: #48494B;
+	width: 300px;
+	height: 100%;
+	right: 0;
+	overflow-y: scroll;
+}
+
+.sidebar .sidebar_top{
+	position: relative;
+	top: 35px;
+	margin-left: 20px;
+	margin-right: 10px;
+	color: #ADADAD;
+	height: 70px;
+}
+
+.sidebar .sidebar_top li{
+	position: relative;
+	display: inline-block;
+	margin-left: 3px;
+	margin-right: 3px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 4px;
+	box-shadow: 0 1px 1px #A8A8A8, 0 -2px 1px #272727;
+	background: #383838;
+}
+
+.sidebar ul{
+	-webkit-transition: all 0.3s ease-in-out;
+	margin-top: 0px;
+}
+
+.sidebar ul p{
+	position: relative;
+	display: block;
+	background: -webkit-linear-gradient(top, rgba(95, 95, 95, 0.4) 0%, rgba(37, 37, 37, 0.9));
+	border-top: 1px solid #797979;
+	border-bottom: 1px solid #111;
+	color: #eee;
+	font-size: 14px;
+	padding-left: 30px;
+}
+
+.sidebar ul li{
+	border-top: 1px solid rgba(255, 255, 255, 0.11);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+	vertical-align: middle;
+}
+
+.sidebar .sidebar_noti{
+	padding-left: 30px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-shadow: 1px 1px 1px #333;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.sidebar .sidebar_noti .noti_left{
+	display: inline-block;
+	width: 150px;
+	vertical-align: middle;
+}
+
+.sidebar .sidebar_noti .noti_name{
+	display: inline-block;
+	color: #FFF;
+	font-size: 13px;
+}
+
+.sidebar .sidebar_noti .noti_info{
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 12px;
+}
+
+.sidebar .sidebar_noti .noti_right{
+	display: inline-block;
+	text-align: right;
+	vertical-align: middle;
+	width: 100px;
+}
+
+.sidebar .sidebar_noti .noti_date{
+	color: rgba(255, 255, 255, 0.91);
+	font-size: 10px;
+}
+
+.sidebar .sidebar_noti .noti_time{
+	color: rgba(163, 158, 158, 0.91);
+	font-size: 10px;
+}
+
+.sidebar .unread_dot{
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	background: #5A9EF5;
+	border-radius: 5px;
+	margin-left: 8px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.71), 0 -3px 5px rgba(0, 0, 0, 0.29) inset;
+}
+
+.sidebar .noti_unread .sidebar_noti{
+	padding-left: 5px;
+}
+
+.sidebar .noti_close{
+	position: absolute;
+	right: 10px;
+	margin-top: 2px;
+	background: #ccc;
+	display: block;
+	font-size: 12px;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 10px;
+	border: 1px solid #333;
+	z-index: 1;
+}
+
+.sidebar .noti_close:hover{
+	background: #aaa;
+}
