@@ -3,7 +3,7 @@ CSS-OS-X
 
 a CSS/JS build Mac OS X UI
 
-demo: [quietshu.github.io/CSS-OS-X](quietshu.github.io/CSS-OS-X)
+demo: [quietshu.github.io/CSS-OS-X](http://quietshu.github.io/CSS-OS-X)
 
 Author: Shu Ding
 Github: github.com/quietshu
