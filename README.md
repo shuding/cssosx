@@ -1,12 +1,8 @@
-CSS-OS-X
-========
+# Mac OS X 10.9 in HTML/CSS3/JS
 
-a CSS/JS build Mac OS X UI
-
-demo: [quietshu.github.io/CSS-OS-X](http://quietshu.github.io/CSS-OS-X)
+====
 
 Author: Shu Ding
-Github: github.com/quietshu
-Email:  ds303077135@gmail.com
+Emila: ds303077135@gmail.com
 
-All rights reserved.
+All Rights Reserved.
