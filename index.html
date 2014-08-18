@@ -2,22 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>OS X</title>
-	<link href="style.css" rel="stylesheet"/>
+	<title>CSS OS X</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="dock.js"></script>
 	<link href="font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet"/>
-	<link href="resize.css" rel="stylesheet"/>
-	<script src="jquery.min.js"></script>
-	<script src="ui/minified/jquery-ui.min.js"></script>
-	<script src="jquery.iframetracker.js"></script>
-	<script src="osx.js"></script>
 </head>
 <body>
-	<div class="body_layout"></div>
+	<p id="copyright">Author/Fork: <a href="https://github.com/quietshu/cssosx">GitHub</a><br/>License: GPL2</p>
 	<div id="main_menubar">
 		<div class="menubar_layout"></div>
 		<ul>
 			<li class="apple_logo">
-				<i class="fa fa-apple" style="opacity: 0.8; font-size:20px; margin-top:3px"></i>
+				<i class="fa fa-apple" style="opacity: 0.8; font-size:20px; margin-top:2px"></i>
 				<ul>
 					<li id="about_this_mac_btn">
 						<p>About This Mac</p>
@@ -188,22 +184,11 @@
 						<div class="right_arrow_space">▶</div>
 						<div class="right_arrow">▶</div>
 						<ul>
-							<li>
-								<div class="left_check">✓</div>
-								<p>Automatic</p>
+							<li class="grey_li">
+								<p>No Services Apply</p>
 							</li>
 							<li>
-								<p>Location (12-12-15 PM2:06)</p>
-							</li>
-							<li>
-								<p>Location (12-12-15 PM2:07)</p>
-							</li>
-							<li>
-								<p>Location (12-12-21 PM3:50)</p>
-							</li>
-							<div class="split_line"></div>
-							<li>
-								<p>Network Preferences...</p>
+								<p>Services Preferences..</p>
 							</li>
 						</ul>
 					</li>
@@ -222,21 +207,46 @@
 						<p>Show All</p>
 					</li>
 				</ul>
-			</li>
+				</li>
 				<li>
-				<p>File</p>
-			</li>
+					<p>File</p>
+					<ul>
+						<li>
+							<p>Example</p>
+						</li>
+					</ul>
+				</li>
 				<li>
 				<p>Edit</p>
+					<ul>
+						<li>
+							<p>Example</p>
+						</li>
+					</ul>
 			</li>
 				<li>
 				<p>View</p>
+					<ul>
+						<li>
+							<p>Example</p>
+						</li>
+					</ul>
 			</li>
 				<li>
 				<p>Go</p>
+					<ul>
+						<li>
+							<p>Example</p>
+						</li>
+					</ul>
 			</li>
 				<li>
 				<p>Window</p>
+					<ul>
+						<li>
+							<p>Example</p>
+						</li>
+					</ul>
 			</li>
 				<li>
 				<p>Help</p>
@@ -257,7 +267,8 @@
 				</ul>
 			</li>
 			</span>
-			<div class="right_icon">
+
+			<div id="right_icon">
 				<li>
 					<p id="system_time"></p>
 					<ul>
@@ -318,535 +329,20 @@
 			</div>
 		</ul>
 	</div>
-	<div class="body_bg launchpad_layout" style="display:none;z-index:10000;-webkit-filter: blur(15px);"></div>
-	<div id="content">
-		<div class="body_bg"></div>
-		<div class="window">
-			<div class="screen_area">
-				<div id="about_finder" class="window_default">
-					<div id="title">
-						<div class="close_btn"><p>×</p></div>
-						<div class="mini_btn"><p>-</p></div>
-						<div class="maxm_btn btn_unable"><p>+</p></div>
-						About Finder
-					</div>
-					<div class="window_content">
-						<iframe height="100%" width="100%" src="about_finder.html"></iframe>
-					</div>
-				</div>
-				<div id="browser" class="window_default">
-					<div id="title">
-						<div class="close_btn"><p>×</p></div>
-						<div class="mini_btn"><p>-</p></div>
-						<div class="maxm_btn"><p>+</p></div>
-						NOYA Browser
-					</div>
-					<input type="submit" name="browser_homepage_btn" id="browser_homepage" class="browser_btn" value="<"/>
-					<input type="submit" name="browser_homepage_btn" id="browser_homepage" class="browser_btn" value=">"/>
-					<input type="submit" name="browser_homepage_btn" id="browser_homepage" class="browser_btn" value="Home"/>
-					<input type="text" name="browser_url_box" class="browser_text" maxlength="100" id="browser_url" value="apple.com" style="width:600px"/>
-					<input type="text" name="browser_search_box" class="browser_text" maxlength="100" value="Google" style="width:200px"/>
-					<div class="window_content">
-						<iframe height="100%" width="100%"  frameborder="0" marginheight="0" marginwidth="0" src="http://apple.com" class="browser_frame" id="NOYA_browser"></iframe>
-					</div>
-				</div>
-				<div id="about_this_mac" class="window_default window_info_box">
-					<div id="title">
-						<div class="close_btn"><p>×</p></div>
-						<div class="mini_btn btn_unable"><p>-</p></div>
-						<div class="maxm_btn btn_unable"><p>+</p></div>
-						About This Mac
-					</div>
-					<div class="window_content">
-						<iframe height="100%" width="100%" src="about_this_mac.html"></iframe>
-					</div>
-				</div>
-				<div id="about_this_proj" class="window_default">
-					<div id="title">
-						<div class="close_btn"><p>×</p></div>
-						<div class="mini_btn btn_unable"><p>-</p></div>
-						<div class="maxm_btn btn_unable"><p>+</p></div>
-						关于此项目 About This Project
-					</div>
-					<div class="window_content">
-						<iframe height="100%" width="100%" src="about_this_proj.html"></iframe>
-					</div>
-				</div>
-				<div id="desktop_menu" class="menu_default window_closed">
-					<ul>
-						<li>
-							<p>New Folder</p>
-						</li>
-						<div class="split_line"></div>
-						<li>
-							<p>Get Info</p>
-						</li>
-						<div class="split_line"></div>
-						<li>
-							<p>Change Desktop Background...</p>
-						</li>
-						<li>
-							<p>Clean Up</p>
-						</li>
-						<li>
-							<p>Clean Up By</p>
-							<div class="right_arrow_space">▶</div>
-							<div class="right_arrow">▶</div>
-							<ul>
-								<li>
-									<p>Name</p>
-								</li>
-								<li>
-									<p>Kind</p>
-								</li>
-								<li>
-									<p>Date Modified</p>
-								</li>
-								<li>
-									<p>Date Created</p>
-								</li>
-								<li>
-									<p>Size</p>
-								</li>
-								<li>
-									<p>Tags</p>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<p>Sort By</p>
-							<div class="right_arrow_space">▶</div>
-							<div class="right_arrow">▶</div>
-							<ul>
-								<li>
-									<p>None</p>
-								</li>
-								<div class="split_line"></div>
-								<li>
-									<p>Snap to Grid</p>
-								</li>
-								<div class="split_line"></div>
-								<li>
-									<div class="left_check">✓</div>
-									<p>Name</p>
-								</li>
-								<li>
-									<p>Kind</p>
-								</li>
-								<li>
-									<p>Date Last Opened</p>
-								</li>
-								<li>
-									<p>Date Added</p>
-								</li>
-								<li>
-									<p>Date Modified</p>
-								</li>
-								<li>
-									<p>Date Created</p>
-								</li>
-								<li>
-									<p>Size</p>
-								</li>
-								<li>
-									<p>Tags</p>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<p>Show View Options</p>
-						</li>
-					</ul>
-				</div>
-			</div>
+	<div id="dockbottom">
+		<div id="container">
+			<img src="Finder.png">
+			<img src="Launchpad.png">
+			<img src="Safari.png">
+			<img src="Chrome.png">
+			<img src="AppLauncher.png">
+			<img src="AppStore.png">
+			<img src="iTunes.png">
+			<img src="iBooks.png">
+			<img src="Messages.png">
+			<img src="Evernote.png">
+			<div id="bg"></div>
 		</div>
-	</div>
-	<div id="sidebar">
-		<div id="sidebar_layout">
-			<div id="sidebar_top">
-			<li>
-				<i class="fa fa-comments"></i>
-			</li>
-			<li>
-				<i class="fa fa-twitter"></i>
-			</li>
-			<li>
-				<i class="fa fa-facebook-square"></i>
-			</li>
-			<li>
-				<i class="fa fa-weibo"></i>
-			</li>
-		</div>
-			<div id="sidebar_bot">
-			<ul>
-			<p>Calendar</p>
-			<li>
-				<div class="sidebar_noti">
-					<div class="noti_left">
-						<div class="noti_name">数学分析</div>
-						<div class="noti_info">3408</div>
-					</div>
-					<div class="noti_right">
-						<div class="noti_date">Tomorrow, 8:00 AM</div>
-						<div class="noti_time">to 9:45 AM</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="sidebar_noti">
-					<div class="noti_left">
-						<div class="noti_name">大学英语</div>
-						<div class="noti_info">HGX204</div>
-					</div>
-					<div class="noti_right">
-						<div class="noti_date">Tomorrow, 9:45 AM</div>
-						<div class="noti_time">to 11:30 AM</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-			<ul>
-			<div class="noti_close">×</div>
-			<p>Facebook</p>
-			<li>
-				<div class="sidebar_noti">
-					<div class="noti_left">
-						<div class="noti_name">新通知</div>
-						<div class="noti_info">哈哈哈哈哈。。</div>
-					</div>
-					<div class="noti_right">
-						<div class="noti_date">11:19 AM</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="noti_unread">
-					<div class="unread_dot"></div>
-					<div class="sidebar_noti">
-						<div class="noti_left">
-							<div class="noti_name">新通知</div>
-							<div class="noti_info">Jack Yu 对您的照片发表了评论...</div>
-						</div>
-						<div class="noti_right">
-							<div class="noti_date">2 days ago</div>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="noti_unread">
-					<div class="unread_dot"></div>
-					<div class="sidebar_noti">
-						<div class="noti_left">
-							<div class="noti_name">新通知</div>
-							<div class="noti_info">Jack Yu 对您的照片发表了评论...</div>
-						</div>
-						<div class="noti_right">
-							<div class="noti_date">2 days ago</div>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-			<ul>
-			<div class="noti_close">×</div>
-			<p>Vox</p>
-			<li>
-				<div class="noti_unread">
-					<div class="unread_dot"></div>
-					<div class="sidebar_noti">
-						<div class="noti_left">
-							<div class="noti_name">We Are One</div>
-						</div>
-						<div class="noti_right">
-							<div class="noti_date">4 days ago</div>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="noti_unread">
-					<div class="unread_dot"></div>
-					<div class="sidebar_noti">
-						<div class="noti_left">
-							<div class="noti_name">Tears And Rain</div>
-						</div>
-						<div class="noti_right">
-							<div class="noti_date">4 days ago</div>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-			<ul>
-			<div class="noti_close">×</div>
-			<p>Magican</p>
-			<li>
-				<div class="sidebar_noti">
-					<div class="noti_left">
-						<div class="noti_name">Magican<br/>CPU 温度过高警告</div>
-						<div class="noti_info">温度高于 80℃</div>
-					</div>
-					<div class="noti_right">
-						<div class="noti_date">3 days ago</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="sidebar_noti">
-					<div class="noti_left">
-						<div class="noti_name">Magican<br/>CPU 温度过高警告</div>
-						<div class="noti_info">温度高于 80℃</div>
-					</div>
-					<div class="noti_right">
-						<div class="noti_date">3 days ago</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="sidebar_noti">
-					<div class="noti_left">
-						<div class="noti_name">Magican<br/>CPU 温度过高警告</div>
-						<div class="noti_info">温度高于 80℃</div>
-					</div>
-					<div class="noti_right">
-						<div class="noti_date">3 days ago</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="sidebar_noti">
-					<div class="noti_left">
-						<div class="noti_name">Magican<br/>CPU 温度过高警告</div>
-						<div class="noti_info">温度高于 80℃</div>
-					</div>
-					<div class="noti_right">
-						<div class="noti_date">3 days ago</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="sidebar_noti">
-					<div class="noti_left">
-						<div class="noti_name">Magican<br/>CPU 温度过高警告</div>
-						<div class="noti_info">温度高于 80℃</div>
-					</div>
-					<div class="noti_right">
-						<div class="noti_date">3 days ago</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-		</div>
-		</div>
-		<div id="sidebar_pre">
-			<div class="sidebar_icon">
-				<i class="fa fa-cog" style="color: #666;font-weight: 100;"></i>
-				<i class="fa fa-cog" style="position: relative;top: -17px;left: -11px;font-weight: 100;"></i>
-				<i class="fa fa-cog" style="position: relative;top: -40px;left: 10px;font-weight: 100;"></i>
-			</div>
-		</div>
-	</div>
-	<div id="dock">
-		<div id="dock_bot" style="display:inline-block">
-			<li>
-				<div class="app_name"><p>Finder</p><div class="app_name_tri"></div></div>
-				<img src="images/finder.png">
-				<div class="open_item_light"></div>
-			</li>
-			<li class="launchpad_app">
-				<div class="app_name"><p>Launchpad</p><div class="app_name_tri"></div></div>
-				<img src="images/launchpad.png">
-			</li>
-			<li class="browser_app">
-				<div class="app_name"><p>NOYA Browser</p><div class="app_name_tri"></div></div>
-				<img src="images/safari.png">
-			</li>
-			<li>
-				<div class="app_name"><p>Terminal</p><div class="app_name_tri"></div></div>
-				<img src="images/terminal.png">
-			</li>
-			<li>
-				<div class="app_name"><p>Preferences</p><div class="app_name_tri"></div></div>
-				<img src="images/preferences.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<div class="dock_bg"></div>
-		</div>
-	</div>
-	<div id="dock2" style="display:none">
-		<div id="dock_bot2" style="display:inline-block">
-			<li>
-				<img src="images/finder.png">
-				<div class="open_item_light"></div>
-			</li>
-			<li>
-				<img src="images/launchpad.png">
-			</li>
-			<li>
-				<img src="images/safari.png">
-			</li>
-			<li>
-				<img src="images/terminal.png">
-			</li>
-			<li>
-				<img src="images/preferences.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<li>
-				<img src="images/finder.png">
-			</li>
-			<div class="dock_bg"></div>
-		</div>
-	</div>
-	<div id="launchpad">
-		<div id="search_layout" style="text-align:center;position:absolute;width:100%">
-			<i class="fa fa-search" style="position: absolute;top: 36px;margin-left: 8px;"></i>
-			<input type="search" result="5" id="launchpad_search_box"/>
-		</div>
-		<ul>
-			<li>
-				<img src="images/finder.png">
-				<div class="app_name"><p>Finder</p></div>
-			</li>
-			<li>
-				<img src="images/finder.png">
-				<div class="app_name"><p>Finder</p></div>
-			</li>
-			<li class="browser_app">
-				<img src="images/safari.png">
-				<div class="app_name"><p>NOYA Browser</p></div>
-			</li>
-			<li>
-				<img src="images/terminal.png">
-				<div class="app_name"><p>Terminal</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-			<li>
-				<img src="images/preferences.png">
-				<div class="app_name"><p>Preferences</p></div>
-			</li>
-		</ul>
 	</div>
 </body>
 </html>
