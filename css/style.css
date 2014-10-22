@@ -44,6 +44,7 @@ body{
   z-index: -1;
 }
 #bg:before{
+  position: absolute;
   content: "";
   background: url(../images/bg_left.png);
   width: 60px;
@@ -52,6 +53,7 @@ body{
   margin-left: -60px;
 }
 #bg:after{
+  position: absolute;
   content: "";
   background: url(../images/bg_right.png);
   width: 60px;
@@ -317,7 +319,7 @@ input[type="range"] {
   position: absolute;
   color: #fff;
   right: 20px;
-  bottom: 10px;
+  bottom: 60px;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 100000000;
