@@ -3,12 +3,20 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>CSS OS X</title>
-	<link rel="stylesheet" href="style.css">
-	<script type="text/javascript" src="dock.js"></script>
-	<link href="font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="css/font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet"/>
 </head>
 <body>
-	<p id="copyright">Author/Fork: <a href="https://github.com/quietshu/cssosx">GitHub</a><br/>License: GPL2</p>
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+	<p id="copyright">
+    <a class="github-button" href="https://github.com/quietshu/cssosx" data-icon="octicon-star" data-count-href="/quietshu/cssosx/stargazers" data-count-api="/repos/quietshu/cssosx#stargazers_count">Star</a><br/>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="quietshu">Tweet</a><br/>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <span>Author: shuding<br/>Fork / Star: <a href="https://github.com/quietshu/cssosx">GitHub</a><br/>License: GPL2</span><br/>
+    <span>Menu bar & Dock by <a href="https://github.com/quietshu">shuding</a></span><br/>
+    <span>Finder CSS by <a href="http://codepen.io/paddykontschak/pen/JALeB">paddykontschak</a></span>
+  </p>
 	<div id="main_menubar">
 		<div class="menubar_layout"></div>
 		<ul>
@@ -329,20 +337,148 @@
 			</div>
 		</ul>
 	</div>
+
+<div id='finder'>
+  <div id='toolbar'>
+    <div id='traffic-light'>
+      <div id='red'></div>
+      <div id='yellow'></div>
+      <div id='green'></div>
+    </div>
+    <div id='windowname'>
+      <i></i>
+      All My Files
+    </div>
+    <div id='actions'>
+      <div id='back'></div>
+      <div id='next'></div>
+      <div id='iconV'></div>
+      <div id='list'></div>
+      <div id='grid'></div>
+      <div id='coverflow'>
+        <i class='view'></i>
+      </div>
+      <div id='settings'></div>
+      <div id='share'></div>
+      <input results='0' type='search'>
+    </div>
+  </div>
+  <div id='view'>
+    <div id='sidebar'>
+      <ul>
+        <li>
+          <span class='group'>
+            Favorites
+          </span>
+          <ul>
+            <li class='current_page'>
+              <i class='afiles'></i>
+              All My Files
+            </li>
+            <li>
+              <i class='airdrop'></i>
+              AirDrop
+            </li>
+            <li>
+              <i class='apps'></i>
+              Applications
+            </li>
+            <li>
+              <i class='desk'></i>
+              Desktop
+            </li>
+            <li>
+              <i class='docs'></i>
+              Documents
+            </li>
+            <li>
+              <i class='downs'></i>
+              Downloads
+            </li>
+            <li>
+              <i class='mov'></i>
+              Movies
+            </li>
+            <li>
+              <i class='music'></i>
+              Music
+            </li>
+            <li>
+              <i class='pic'></i>
+              Pictures
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class='group'>
+            Shared
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div id='content'>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Desktop
+        </span>
+      </div>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Documents
+        </span>
+      </div>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Downloads
+        </span>
+      </div>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Movies
+        </span>
+      </div>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Music
+        </span>
+      </div>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Pictures
+        </span>
+      </div>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Public
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
 	<div id="dockbottom">
 		<div id="container">
-			<img src="Finder.png">
-			<img src="Launchpad.png">
-			<img src="Safari.png">
-			<img src="Chrome.png">
-			<img src="AppLauncher.png">
-			<img src="AppStore.png">
-			<img src="iTunes.png">
-			<img src="iBooks.png">
-			<img src="Messages.png">
-			<img src="Evernote.png">
+			<img src="images/Finder.png">
+			<img src="images/Launchpad.png">
+			<img src="images/Safari.png">
+			<img src="images/Chrome.png">
+			<img src="images/AppLauncher.png">
+			<img src="images/AppStore.png">
+			<img src="images/iTunes.png">
+			<img src="images/iBooks.png">
+			<img src="images/Messages.png">
+			<img src="images/Evernote.png">
 			<div id="bg"></div>
 		</div>
 	</div>
+
+  <script type="text/javascript" src="js/dock.js"></script>
 </body>
 </html>
