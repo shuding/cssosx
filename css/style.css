@@ -1,3 +1,11 @@
+html {
+  background-image: url(../images/Wave.jpg);
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+}
+
 body{
   position: absolute;
   height: 100%;
@@ -6,8 +14,6 @@ body{
   padding: 0;
   margin: 0;
   overflow: hidden;
-  background-image: url(../images/Wave.jpg);
-  background-size: cover;
   outline: 0;
   cursor: default;
   font-family: 'Lucida Grande', Lucida, Helvetica, Arial, sans-serif;
@@ -93,6 +99,7 @@ ul, li {
   position: absolute;
   height: 24px;
   width: 100%;
+  letter-spacing: -0.015em;
 }
 
 #main_menubar .menubar_layout{
@@ -128,7 +135,6 @@ ul, li {
   padding-left: 8px;
   padding-right: 8px;
   font-size: 15px;
-  font-family: 'Lucida Sans';
   height: 24px;
   vertical-align: top;
 }
@@ -179,7 +185,7 @@ ul, li {
 }
 
 #main_menubar ul ul li{
-  display: block;
+  display: flex;
   padding-left: 24px;
   padding-right: 24px;
   z-index: 101;
@@ -214,13 +220,14 @@ ul, li {
   display: inline-block;
   opacity: 0;
   padding-left: 16px;
+  min-width: 5px;
 }
 
 #main_menubar .right_arrow{
-  position: absolute;
+  flex: 1;
   display: inline-block;
-  top:0px;
-  right: 16px;
+  text-align: right;
+  margin-right: -10px;
 }
 
 #main_menubar .left_check{
@@ -281,17 +288,20 @@ ul .spotlight li.spotlight_bar p{
   font-size: 13px;
   margin-right: 8px;
   margin-left: 24px;
+  line-height: 30px;
 }
 
 ul .spotlight li p{
   font-size: 12px;
   margin-right: 8px;
   margin-left: 24px;
+  line-height: 17px;
 }
 
 ul li .spotlight_bar input[type="search"]{
   height: 20px;
   width: 220px;
+  padding: 0 10px;
   margin-right: -19px;
   font-size: 13px;
   margin-top: 5px;

@@ -4,6 +4,7 @@
 	<meta charset="UTF-8" />
 	<title>CSS OS X</title>
 	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sierra-overwrite.css">
 	<link href="css/font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet"/>
 </head>
 <body>
@@ -13,7 +14,7 @@
     <a class="github-button" href="https://github.com/quietshu/cssosx" data-icon="octicon-star" data-count-href="/quietshu/cssosx/stargazers" data-count-api="/repos/quietshu/cssosx#stargazers_count">Star</a><br/>
     <a href="https://twitter.com/share" class="twitter-share-button" data-via="quietshu">Tweet</a><br/>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    <span>Author: shuding<br/>Fork / Star: <a href="https://github.com/quietshu/cssosx">GitHub</a><br/>License: GPL2</span><br/>
+    <span>Author: shuding<br/>Fork / Star: <a href="https://github.com/quietshu/cssosx">GitHub</a><br/>License: MIT</span><br/>
     <span>Menu bar & Dock by <a href="https://github.com/quietshu">shuding</a></span><br/>
     <span>Finder CSS by <a href="http://codepen.io/paddykontschak/pen/JALeB">paddykontschak</a></span>
   </p>
@@ -21,7 +22,7 @@
 		<div class="menubar_layout"></div>
 		<ul>
 			<li class="apple_logo">
-				<i class="fa fa-apple" style="opacity: 0.8; font-size:20px; margin-top:2px"></i>
+				<i class="fa fa-apple" style="opacity: 0.8; font-size:18px; margin-top:4px"></i>
 				<ul>
 					<li id="about_this_mac_btn">
 						<p>About This Mac</p>
@@ -165,7 +166,7 @@
 				</ul>
 			</li>
 			<span class="menubar_current">
-				<li>
+			<li>
 				<p><b>Finder</b></p>
 				<ul>
 					<li id="about_finder_btn">
@@ -220,16 +221,106 @@
 					<p>File</p>
 					<ul>
 						<li>
-							<p>Example</p>
-						</li>
+              <p>New Finder Window</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘N</div>
+            </li>
+            <li>
+              <p>New Folder</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⇧⌘N</div>
+            </li>
+            <li class="grey_li">
+              <p>New Folder With Selection</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">^⌘N</div>
+            </li>
+            <li>
+              <p>New Smart Folder</p>
+            </li>
+            <li>
+              <p>New Tab</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘T</div>
+            </li>
+            <li>
+              <p>Open</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘O</div>
+            </li>
+            <li class="grey_li">
+              <p>Open With</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">▶</div>
+            </li>
+            <li class="grey_li">
+              <p>Print</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘P</div>
+            </li>
+            <li>
+              <p>Close Window</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘W</div>
+            </li>
+            <div class="split_line"></div>
+            <li>
+              <p>Get Info</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘I</div>
+            </li>
+            <li class="grey_li">
+              <p>Rename</p>
+            </li>
 					</ul>
 				</li>
 				<li>
 				<p>Edit</p>
 					<ul>
-						<li>
-							<p>Example</p>
-						</li>
+            <li class="grey_li">
+              <p>Undo</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘Z</div>
+            </li>
+            <li class="grey_li">
+              <p>Redo</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⇧⌘Z</div>
+            </li>
+            <div class="split_line"></div>
+            <li class="grey_li">
+              <p>Cut</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘X</div>
+            </li>
+            <li class="grey_li">
+              <p>Copy</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘C</div>
+            </li>
+            <li class="grey_li">
+              <p>Paste</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘V</div>
+            </li>
+            <li>
+              <p>Select All</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘A</div>
+            </li>
+            <div class="split_line"></div>
+            <li>
+              <p>Show Clipboard</p>
+            </li>
+            <div class="split_line"></div>
+            <li>
+              <p>Start Dictation...</p>
+            </li>
+            <li>
+              <p>Emoji & Symbols</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">^⌘Space</div>
+            </li>
 					</ul>
 			</li>
 				<li>
@@ -269,7 +360,7 @@
 					</li>
 					<div class="split_line"></div>
 					<li>
-						<p>What's New in OS X Mavericks?</p>
+						<p>What's New in macOS?</p>
 					</li>
 					<div class="split_space"></div>
 				</ul>

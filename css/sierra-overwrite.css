@@ -1,0 +1,47 @@
+html {
+  background-image: url(../images/Sierra.jpg);
+}
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', 'Arial', 'PingFang SC', 'PingFang TC', 'PingFang HK', 'Microsoft YaHei', sans-serif;
+}
+
+#main_menubar .menubar_layout {
+  background: rgba(255,255,255,0.74);
+}
+
+#main_menubar ul {
+  color: black;
+  -webkit-backdrop-filter: blur(15px);
+}
+
+#main_menubar > ul {
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+#main_menubar ul ul {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.33), 0 1px 0 1px rgba(76, 76, 76, 0.26), 0 1px 0 rgba(0, 0, 0, 0.29) inset;
+}
+
+#main_menubar ul ul ul {
+  border-top-left-radius: 5px;
+}
+
+#main_menubar ul li {
+  font-size: 14px;
+}
+
+#main_menubar ul li p {
+  margin-top: 3px;
+}
+
+#main_menubar ul li:hover {
+  background: rgba(29,91,224,0.9);
+}
+
+ul li .spotlight_bar{
+  background: #ccc;
+  color: inherit;
+  height: 30px !important;
+}

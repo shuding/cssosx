@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>CSS OS X</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="css/font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet"/>
+</head>
+<body>
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+	<p id="copyright">
+    <a class="github-button" href="https://github.com/quietshu/cssosx" data-icon="octicon-star" data-count-href="/quietshu/cssosx/stargazers" data-count-api="/repos/quietshu/cssosx#stargazers_count">Star</a><br/>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="quietshu">Tweet</a><br/>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <span>Author: shuding<br/>Fork / Star: <a href="https://github.com/quietshu/cssosx">GitHub</a><br/>License: MIT</span><br/>
+    <span>Menu bar & Dock by <a href="https://github.com/quietshu">shuding</a></span><br/>
+    <span>Finder CSS by <a href="http://codepen.io/paddykontschak/pen/JALeB">paddykontschak</a></span>
+  </p>
+	<div id="main_menubar">
+		<div class="menubar_layout"></div>
+		<ul>
+			<li class="apple_logo">
+				<i class="fa fa-apple" style="opacity: 0.8; font-size:20px; margin-top:2px"></i>
+				<ul>
+					<li id="about_this_mac_btn">
+						<p>About This Mac</p>
+					</li>
+					<li>
+						<p>Software Update...</p>
+					</li>
+					<li>
+						<p>App Store...</p>
+					</li>
+					<div class="split_line"></div>
+					<li>
+						<p>System Preferences...</p>
+					</li>
+					<li>
+						<p>Dock</p>
+						<div class="right_arrow_space"></div>
+						<div class="right_arrow">▶</div>
+						<ul>
+							<li>
+								<p>Turn Hidding On</p>
+								<div class="right_arrow_space">⌥⌘D</div>
+								<div class="right_arrow">⌥⌘D</div>
+							</li>
+							<li>
+								<p>Turn Magnification On</p>
+							</li>
+							<div class="split_line"></div>
+							<li>
+								<p>Position on Left</p>
+							</li>
+							<li>
+								<div class="left_check">✓</div>
+								<p>Position on Bottom</p>
+							</li>
+							<li>
+								<p>Position on Right</p>
+							</li>
+							<div class="split_line"></div>
+							<li>
+								<p>Dock Preferences...</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>Location</p>
+						<div class="right_arrow_space">▶</div>
+						<div class="right_arrow">▶</div>
+						<ul>
+							<li>
+								<div class="left_check">✓</div>
+								<p>Automatic</p>
+							</li>
+							<li>
+								<p>Location (12-12-15 PM2:06)</p>
+							</li>
+							<li>
+								<p>Location (12-12-15 PM2:07)</p>
+							</li>
+							<li>
+								<p>Location (12-12-21 PM3:50)</p>
+							</li>
+							<div class="split_line"></div>
+							<li>
+								<p>Network Preferences...</p>
+							</li>
+						</ul>
+					</li>
+					<div class="split_line"></div>
+					<li>
+						<p>Recent Items</p>
+						<div class="right_arrow_space">▶</div>
+						<div class="right_arrow">▶</div>
+						<ul>
+								<div class="menu_block">
+									<p>Applications</p>
+									<li id="browser_btn">
+										<p>NOYA Browser</p>
+									</li>
+									<li>
+										<p>Coda 2</p>
+									</li>
+									<li>
+										<p>Font Book</p>
+									</li>
+									<li>
+										<p>GitHub</p>
+									</li>
+									<li>
+										<p>Google Chrome</p>
+									</li>
+								</div>
+								<div class="split_line"></div>
+								<div class="menu_block">
+									<p>Documents</p>
+									<li>
+										<p>osx.js</p>
+									</li>
+									<li>
+										<p>style.css</p>
+									</li>
+								</div>
+								<div class="split_line"></div>
+								<div class="menu_block">
+									<p>Servers</p>
+									<li>
+										<p>home</p>
+									</li>
+									<li>
+										<p>root</p>
+									</li>
+								</div>
+								<div class="split_line"></div>
+								<li>
+									<p>Clear Menu</p>
+								</li>
+						</ul>
+					</li>
+					<div class="split_line"></div>
+					<li>
+						<p>Force Quit...</p>
+						<div class="right_arrow_space">⌥⌘⎋</div>
+						<div class="right_arrow">⌥⌘⎋</div>
+					</li>
+					<div class="split_line"></div>
+					<li>
+						<p>Sleep</p>
+					</li>
+					<li>
+						<p>Restart...</p>
+					</li>
+					<li id="shutdown">
+						<p>Shut Down...</p>
+					</li>
+					<div class="split_line"></div>
+					<li>
+						<p>Log Out ds...</p>
+						<div class="right_arrow_space">⇧⌘Q</div>
+						<div class="right_arrow">⇧⌘Q</div>
+					</li>
+				</ul>
+			</li>
+			<span class="menubar_current">
+			<li>
+				<p><b>Finder</b></p>
+				<ul>
+					<li id="about_finder_btn">
+						<p>About Finder</p>
+					</li>
+					<div class="split_line"></div>
+					<li>
+						<p>Preferences...</p>
+						<div class="right_arrow_space"></div>
+						<div class="right_arrow">⌘,</div>
+					</li>
+					<div class="split_line"></div>
+					<li>
+						<p>Empty Trash...</p>
+						<div class="right_arrow_space"></div>
+						<div class="right_arrow">⇧⌘⌫</div>
+					</li>
+					<li>
+						<p>Secure Empty Trash...</p>
+					</li>
+					<div class="split_line"></div>
+					<li>
+						<p>Services</p>
+						<div class="right_arrow_space">▶</div>
+						<div class="right_arrow">▶</div>
+						<ul>
+							<li class="grey_li">
+								<p>No Services Apply</p>
+							</li>
+							<li>
+								<p>Services Preferences..</p>
+							</li>
+						</ul>
+					</li>
+					<div class="split_line"></div>
+					<li>
+						<p>Hide Finder</p>
+						<div class="right_arrow_space">⌘H</div>
+						<div class="right_arrow">⌘H</div>
+					</li>
+					<li>
+						<p>Hide Others</p>
+						<div class="right_arrow_space">⌥⌘H</div>
+						<div class="right_arrow">⌥⌘H</div>
+					</li>
+					<li class="grey_li">
+						<p>Show All</p>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<p>File</p>
+					<ul>
+						<li>
+              <p>New Finder Window</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘N</div>
+            </li>
+            <li>
+              <p>New Folder</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⇧⌘N</div>
+            </li>
+            <li class="grey_li">
+              <p>New Folder With Selection</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">^⌘N</div>
+            </li>
+            <li>
+              <p>New Smart Folder</p>
+            </li>
+            <li>
+              <p>New Tab</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘T</div>
+            </li>
+            <li>
+              <p>Open</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘O</div>
+            </li>
+            <li class="grey_li">
+              <p>Open With</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">▶</div>
+            </li>
+            <li class="grey_li">
+              <p>Print</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘P</div>
+            </li>
+            <li>
+              <p>Close Window</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘W</div>
+            </li>
+            <div class="split_line"></div>
+            <li>
+              <p>Get Info</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘I</div>
+            </li>
+            <li class="grey_li">
+              <p>Rename</p>
+            </li>
+					</ul>
+				</li>
+				<li>
+				<p>Edit</p>
+					<ul>
+            <li class="grey_li">
+              <p>Undo</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘Z</div>
+            </li>
+            <li class="grey_li">
+              <p>Redo</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⇧⌘Z</div>
+            </li>
+            <div class="split_line"></div>
+            <li class="grey_li">
+              <p>Cut</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘X</div>
+            </li>
+            <li class="grey_li">
+              <p>Copy</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘C</div>
+            </li>
+            <li class="grey_li">
+              <p>Paste</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘V</div>
+            </li>
+            <li>
+              <p>Select All</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">⌘A</div>
+            </li>
+            <div class="split_line"></div>
+            <li>
+              <p>Show Clipboard</p>
+            </li>
+            <div class="split_line"></div>
+            <li>
+              <p>Start Dictation...</p>
+            </li>
+            <li>
+              <p>Emoji & Symbols</p>
+              <div class="right_arrow_space"></div>
+              <div class="right_arrow">^⌘Space</div>
+            </li>
+					</ul>
+			</li>
+				<li>
+				<p>View</p>
+					<ul>
+						<li>
+							<p>Example</p>
+						</li>
+					</ul>
+			</li>
+				<li>
+				<p>Go</p>
+					<ul>
+						<li>
+							<p>Example</p>
+						</li>
+					</ul>
+			</li>
+				<li>
+				<p>Window</p>
+					<ul>
+						<li>
+							<p>Example</p>
+						</li>
+					</ul>
+			</li>
+				<li>
+				<p>Help</p>
+				<ul class="spotlight">
+					<li class="spotlight_bar">
+						<p>Search</p>
+						<input type="search">
+					</li>
+					<div class="split_space"></div>
+					<li>
+						<p>Help Center</p>
+					</li>
+					<div class="split_line"></div>
+					<li>
+						<p>What's New in OS X Mavericks?</p>
+					</li>
+					<div class="split_space"></div>
+				</ul>
+			</li>
+			</span>
+
+			<div id="right_icon">
+				<li>
+					<p id="system_time"></p>
+					<ul>
+						<li class="grey_li">
+							<p id="system_date_line"></p>
+						</li>
+						<div class="split_line"></div>
+						<li>
+							<p>View as Analog</p>
+						</li>
+						<li>
+							<div class="left_check">✓</div>
+							<p>View as Digital</p>
+						</li>
+						<div class="split_line"></div>
+						<li>
+							<p>Open Date & Time Preferences...</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<i class="fa fa-lock"></i>
+				</li>
+				<li>
+					<p>ds</p>
+					<ul>
+						<li class="user_bar grey_li">
+							<p>ds</p>
+						</li>
+						<div class="split_line"></div>
+						<li>
+							<p>Login Window...</p>
+						</li>
+						<div class="split_line"></div>
+						<li>
+							<p>Users & Groups Preferences...</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<i class="fa fa-volume-up system_volume" style="width:14px"></i>
+					<ul class="system_volume">
+						<input type="range" id="volume"/>
+					</ul>
+				</li>
+				<li>
+					<i class="fa fa-search"></i>
+					<ul class="spotlight">
+						<li class="spotlight_bar">
+							<p>Spotlight</p>
+							<input type="search">
+						</li>
+					</ul>
+				</li>
+				<li class="sidebar_btn">
+					<i class="fa fa-list"></i>
+				</li>
+			</div>
+		</ul>
+	</div>
+
+<div id='finder'>
+  <div id='toolbar'>
+    <div id='traffic-light'>
+      <div id='red'></div>
+      <div id='yellow'></div>
+      <div id='green'></div>
+    </div>
+    <div id='windowname'>
+      <i></i>
+      All My Files
+    </div>
+    <div id='actions'>
+      <div id='back'></div>
+      <div id='next'></div>
+      <div id='iconV'></div>
+      <div id='list'></div>
+      <div id='grid'></div>
+      <div id='coverflow'>
+        <i class='view'></i>
+      </div>
+      <div id='settings'></div>
+      <div id='share'></div>
+      <input results='0' type='search'>
+    </div>
+  </div>
+  <div id='view'>
+    <div id='sidebar'>
+      <ul>
+        <li>
+          <span class='group'>
+            Favorites
+          </span>
+          <ul>
+            <li class='current_page'>
+              <i class='afiles'></i>
+              All My Files
+            </li>
+            <li>
+              <i class='airdrop'></i>
+              AirDrop
+            </li>
+            <li>
+              <i class='apps'></i>
+              Applications
+            </li>
+            <li>
+              <i class='desk'></i>
+              Desktop
+            </li>
+            <li>
+              <i class='docs'></i>
+              Documents
+            </li>
+            <li>
+              <i class='downs'></i>
+              Downloads
+            </li>
+            <li>
+              <i class='mov'></i>
+              Movies
+            </li>
+            <li>
+              <i class='music'></i>
+              Music
+            </li>
+            <li>
+              <i class='pic'></i>
+              Pictures
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class='group'>
+            Shared
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div id='content'>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Desktop
+        </span>
+      </div>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Documents
+        </span>
+      </div>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Downloads
+        </span>
+      </div>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Movies
+        </span>
+      </div>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Music
+        </span>
+      </div>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Pictures
+        </span>
+      </div>
+      <div class='folder'>
+        <div class='icon'></div>
+        <span>
+          Public
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<div id="dockbottom">
+		<div id="container">
+			<img src="images/Finder.png">
+			<img src="images/Launchpad.png">
+			<img src="images/Safari.png">
+			<img src="images/Chrome.png">
+			<img src="images/AppLauncher.png">
+			<img src="images/AppStore.png">
+			<img src="images/iTunes.png">
+			<img src="images/iBooks.png">
+			<img src="images/Messages.png">
+			<img src="images/Evernote.png">
+			<div id="bg"></div>
+		</div>
+	</div>
+
+  <script type="text/javascript" src="js/dock.js"></script>
+</body>
+</html>
