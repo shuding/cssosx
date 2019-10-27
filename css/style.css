@@ -709,6 +709,11 @@ input[type="range"] {
   transform: rotate(180deg);
 }
 
+#system_time {
+  font-variant-numeric: tabular-nums;
+  font-variant: tabular-nums;
+}
+
 #share {
   left: -5px;
   color: #a1a1a1;
